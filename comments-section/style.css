@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+
+:root {
+  --moderate-blue: #5457b6;
+  --soft-red: #ed6468;
+  --light-grayish-blue: #c3c4ef;
+  --pale-red: #ffb8bb;
+  --dark-blue: rgb(50, 65, 82);
+  --grayish-blue: hsl(211, 10%, 45%);
+  --light-gray: #eaecf1;
+  --very-light-gray: #f5f6fa;
+  --white: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--light-gray);
+  padding: 1.5rem;
+  font-family: 'Rubik', sans-serif;
+}
+
+.backdrop{
+  background-color: rgba(50, 65, 82, .5);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.modal__card{
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  z-index: 3;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 23rem;
+}
+
+.action-buttons{
+  margin-top: 2rem;
+}
+
+.action-buttons a:not(:first-of-type){
+  margin-left: 1rem;
+}
+
+.all-comments{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  max-width: 60rem;
+}
+
+.card {
+  background-color: var(--white);
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  position: relative;
+  width: 100%;
+  max-width: 60rem;
+}
+
+.card__content{
+  width: 100%;
+}
+
+.reply-card {
+  max-width: 95%;
+}
+
+.card__widget {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 1rem;
+  padding: 0 1rem;
+  height: 6.5rem;
+  margin-right: 1rem;
+  background-color: var(--light-gray);
+}
+
+.card__widget--sign {
+  color: var(--light-grayish-blue);
+  font-weight: 700;
+}
+
+.card__widget--number {
+  color: var(--moderate-blue);
+  font-weight: 700;
+}
+
+.user-data {
+  display: flex;
+  align-items: center;
+}
+
+.user-data span:not(:first-of-type) {
+  margin-left: 1rem;
+}
+
+.avatar-image {
+  width: 3.2rem;
+}
+
+.username {
+  color: var(--dark-blue);
+  font-weight: 500;
+}
+
+.post-date {
+  color: var(--grayish-blue);
+}
+
+.paragraph {
+  margin-top: 1rem;
+  color: var(--grayish-blue);
+}
+
+.secondary-heading{
+  color: var(--dark-blue);
+}
+
+.reply {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.reply div:last-of-type{
+  margin-left: 1rem;
+}
+
+.reply__text {
+  margin-left: 0.5rem;
+  font-weight: 500;
+}
+
+.reply__text--reply {
+  color: var(--moderate-blue);
+}
+
+.reply__text--edit {
+  color: var(--moderate-blue);
+}
+
+.reply__text--del {
+  color: var(--soft-red);
+}
+
+.reply-to {
+  font-weight: 500;
+  color: var(--moderate-blue);
+}
+
+.comment-card{
+  display: flex;
+  align-items: flex-start;
+}
+
+.form{
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.form__edit{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 100%;
+}
+
+.add-comment{
+  resize: none;
+  margin: 0 1rem;
+  padding: .7rem 1.2rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid var(--light-gray);
+  color: var(--grayish-blue);
+  width: 100%;
+}
+
+.add-comment__edit{
+  resize: none;
+  margin: 1rem 0;
+  padding: .7rem 1.2rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid var(--light-gray);
+  color: var(--grayish-blue);
+  width: 100%;
+}
+
+.add-comment:focus{
+  outline: 1px solid var(--grayish-blue);
+}
+
+.btn,
+.btn:link{
+  border: none;
+  padding: .7rem 1.5rem;
+  border-radius: 0.5rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn--primary{
+  background-color: var(--moderate-blue);
+  color: var(--white);
+}
+
+.btn--del{
+  background-color: var(--soft-red);
+  color: var(--white);
+}
+
+.btn--cancel{
+  background-color: var(--grayish-blue);
+  color: var(--white);
+}
+
+.btn-reply, .btn-del, .btn-edit{
+  cursor: pointer;
+}
+
+.hidden{
+  display: none;
+}
