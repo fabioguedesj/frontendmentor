@@ -1,6 +1,6 @@
 ## Sobre
 
-Projeto 'QR Code' feito como desafio para o site 'Frontend Mentor'
+Projeto de interface 'QR Code'
 
 # Linguagens:
 
